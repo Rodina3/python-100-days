@@ -21,15 +21,19 @@ screen.onkey(snake.right, "Right")
 screen.onkey(snake.left, "Left")
 
 game_is_on = True
+speed = 0.2
 while game_is_on:
     screen.update()
-    time.sleep(0.1)
+
+    time.sleep(speed)
     snake.move()
 
     if snake.head.distance(food) < 15:
         snake.extend()
         food.refresh()
         score_board.increase_score()
+        if speed > 0.1:
+            speed -= 0.02
 
     if snake.head.xcor() > 280 \
             or snake.head.xcor() < -280 \
