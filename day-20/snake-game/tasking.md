@@ -4,5 +4,5 @@
 - [x] Control the snake
 - [x] Detect collision with food
 - [x] Create a scoreboard
-- [ ] Detect collision with wall
+- [x] Detect collision with wall
 - [ ] Detect collision with tail
