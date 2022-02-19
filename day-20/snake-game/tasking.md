@@ -2,7 +2,7 @@
 - [x] Create a snake body
 - [x] Move the snake
 - [x] Control the snake
-- [ ] Detect collision with food
+- [x] Detect collision with food
 - [ ] Create a scoreboard
 - [ ] Detect collision with wall
 - [ ] Detect collision with tail
