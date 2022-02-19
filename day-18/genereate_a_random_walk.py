@@ -3,18 +3,13 @@ import random
 
 tim = t.Turtle()
 
-# Draw Shapes
 colors = ["CornflowerBlue", "DarkOrchid", "IndianRed", "DeepSkyBlue", "LightSeaGreen", "wheat", "SlateGray",
           "SeaGreen"]
+directions = [0, 90, 180, 270]
+tim.pensize(15)
+tim.speed('fastest')
 
-
-def draw_shape(num_sides):
-    angle = 360 / num_sides
-    for _ in range(num_sides):
-        tim.forward(100)
-        tim.right(angle)
-
-
-for shape_side_in in range(3, 10):
+for _ in range(200):
     tim.color(random.choice(colors))
-    draw_shape(shape_side_in)
+    tim.forward(30)
+    tim.setheading(random.choice(directions))
