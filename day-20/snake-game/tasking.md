@@ -1,5 +1,5 @@
 ## Tasking
-- [ ] Create a snake body
+- [x] Create a snake body
 - [ ] Move the snake
 - [ ] Control the snake
 - [ ] Detect collision with food
