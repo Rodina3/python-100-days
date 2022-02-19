@@ -5,4 +5,4 @@
 - [x] Detect collision with food
 - [x] Create a scoreboard
 - [x] Detect collision with wall
-- [ ] Detect collision with tail
+- [x] Detect collision with tail
