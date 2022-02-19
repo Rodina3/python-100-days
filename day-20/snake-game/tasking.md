@@ -3,6 +3,6 @@
 - [x] Move the snake
 - [x] Control the snake
 - [x] Detect collision with food
-- [ ] Create a scoreboard
+- [x] Create a scoreboard
 - [ ] Detect collision with wall
 - [ ] Detect collision with tail
