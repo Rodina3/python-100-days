@@ -3,6 +3,9 @@ import pandas
 import random
 
 BACKGROUND_COLOR = "#B1DDC6"
+NEW_LANGUAGE = "English"
+TRANSLATE_LANGUAGE = "Chinese"
+FLIP_TIME = 1500
 
 try:
     data = pandas.read_csv("data/frequency_words.csv")
@@ -19,15 +22,16 @@ def next_card():
     global current_word, flip_timer
     window.after_cancel(flip_timer)
     current_word = random.choice(to_learn)
-    canvas.itemconfig(card_title, text="English", fill="black")
-    canvas.itemconfig(card_word, text=current_word["English"], fill="black")
+
+    canvas.itemconfig(card_title, text=NEW_LANGUAGE, fill="black")
+    canvas.itemconfig(card_word, text=current_word[NEW_LANGUAGE], fill="black")
     canvas.itemconfig(card_background, image=card_front_img)
-    flip_timer = window.after(3000, func=flip_card)
+    flip_timer = window.after(FLIP_TIME, func=flip_card)
 
 
 def flip_card():
-    canvas.itemconfig(card_title, text="Chinese", fill="white")
-    canvas.itemconfig(card_word, text=current_word["Chinese"], fill="white")
+    canvas.itemconfig(card_title, text=TRANSLATE_LANGUAGE, fill="white")
+    canvas.itemconfig(card_word, text=current_word[TRANSLATE_LANGUAGE], fill="white")
     canvas.itemconfig(card_background, image=card_back_img)
 
 
@@ -41,7 +45,7 @@ def is_known():
 window = Tk()
 window.title("Remember Words")
 window.config(padx=50, pady=50, bg=BACKGROUND_COLOR)
-flip_timer = window.after(3000, func=flip_card)
+flip_timer = window.after(FLIP_TIME, func=flip_card)
 
 canvas = Canvas(width=800, height=526)
 card_front_img = PhotoImage(file="images/card_front.png")
